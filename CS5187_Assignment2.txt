@@ -1,0 +1,26 @@
+ASSIGNMENT 2
+CS5187 VISION AND IMAGE 
+
+Given stereo image pairs (three stereo pairs are provided in   https://drive.google.com/drive/folders/1pdDkFpa59m4A02pLkUqI1H2Zb_GerLkK?usp=sharing  ),  you are required to write a program with C++ or Python or Matlab to compute the the Disparity Maps of each left (view1) image.    
+For each stereo pair, the two images (named view1.png and view5.png) are already rectified so that all image motion is purely horizontal. Ground-truth disparity maps of the left view (view1) are also provided for reference.                
+The reconstructed results will be evaluated by Peak_Signal-to-Noise_Ratio (PSNR): https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio . You can use the source code implemented by Matlab (https://www.mathworks.com/help/vision/ref/psnr.html) or Python ( https://cvnote.ddlee.cc/2019/09/12/psnr-ssim-python ) for PSNR calculation. The PSNR is calculated against the ground-truth disparity map. The higher PSNR you can achieve, the better performance you will get.                                             
+   Hints:
+   To complete the task, if you select OpenCV, the following OpenCV functions you can use:
+o xfeatures2d.SIFT_create()		// SIFT
+o BFMatcher()				// feature matching
+o findFundamentalMat()			// fundamental matrix
+o computeCorrespondEpilines()		// epipolar line
+o stereoRectifyUncalibrated()		// image rectification
+o warpPerspective()			// perspective warping
+Deep learning based methods can also be adopted. For example, you can use external datasets for model pretraining.
+
+Submission
+ Please zip the followings and submit to Canvas:
+* Computer program: Python/Matlab/C++ recommended. If you want to use another program language, please send an email to the TA (yibingliu8-c@my.cityu.edu.hk).
+* Submission Files: The following files should be provided:  a. three disparity maps estimated by your program, as well as the PSNR results of reconstructed disparity maps (30%);  b. source code (20%); c. report (academic writing 25%, novelty of method 25%).
+* Report:  Report should be brief and no more than 6 pages. The report should briefly describe and analyze your methods. 
+   										
+
+
+
+
